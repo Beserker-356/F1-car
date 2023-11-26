@@ -1,0 +1,234 @@
+@font-face {
+  font-family: Monument;
+  src: url(Fonts/MonumentExtended-Regular.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  perspective: 100px;
+}
+
+#hero {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+
+#main {
+  height: 100%;
+  width: 80%;
+  background-color: #101010;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#head-text {
+  font-size: 19px;
+  z-index: 3;
+  letter-spacing: 0.5px;
+  scale: 2;
+  top: 18%;
+  width: 49%;
+  position: absolute;
+  text-align: center;
+  color: white;
+  mix-blend-mode: difference;
+  font-family: "Monument";
+}
+
+#img-cont {
+  aspect-ratio: 2.35 / 1;
+  width: 700px;
+  z-index: 5;
+  background-image: url(Images/f1.png);
+  background-size: contain;
+}
+
+#head-back {
+  top: 15%;
+  z-index: 2;
+  position: absolute;
+  width: 25%;
+  height: 60vh;
+  background-color: #ced4da;
+}
+
+#text1 {
+  position: absolute;
+  z-index: 3;
+  top: 36%;
+  transform: rotate(-5deg);
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #ced4da;
+}
+
+#text1::-webkit-scrollbar {
+  display: none;
+}
+
+#text1>h1 {
+  display: inline-block;
+  font-family: "Monument";
+  font-size: 70px;
+  margin-left: 30px;
+  color: #101010;
+  animation: scroll infinite linear 5s;
+}
+
+#text2 {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  width: 100%;
+  white-space: nowrap;
+  transform: rotate(5deg);
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #101010;
+}
+
+#text2::-webkit-scrollbar {
+  display: none;
+}
+
+#text2>h1 {
+  display: inline-block;
+  font-family: "Monument";
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ced4da;
+  font-size:80px;
+  margin-left: 30px;
+  animation: scroll infinite linear 5s;
+  animation-direction: reverse;
+}
+
+#text3 {
+  position: absolute;
+  z-index: 3;
+  top: 60%;
+  width: 100%;
+  white-space: nowrap;
+  transform: rotate(-10deg);
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #ced4da;
+}
+
+#text3::-webkit-scrollbar {
+  display: none;
+}
+
+#text3>h1 {
+  display: inline-block;
+  font-family: "Monument";
+  font-size:100px;
+  margin-left: 30px;
+  color: #101010;
+  animation: scroll infinite linear 2s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 32px));
+  }
+}
+
+#aside {
+  height: 100vh;
+  width: 40%;
+  background-color: #101010;
+  padding: 100px 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#navi {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color: #101010;
+}
+
+#navi a {
+  text-decoration: none;
+  color: #ced4da;
+  font-family: Monument;
+  padding: 20px;
+}
+
+#navi img {
+  width: 120px;
+}
+
+#navi div {
+  display: flex;
+  align-items: center;
+}
+
+#navi {
+  color: #ced4da;
+  font-family: Monument;
+}
+
+#aside h1 {
+  color: #ced4da;
+  font-family: Monument;
+  text-transform: uppercase;
+}
+
+#aside p {
+  color: #ced4da;
+  font-family: Monument;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+#two {
+  margin-top: 80px;
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+
+#two>div p {
+  font-size: 0.6rem;
+  margin: 10px;
+}
+
+#two>div>p {
+  font-size: 1rem;
+}
+
+#two ul {
+  margin-top: 20px;
+  color: #ced4da;
+  font-family: Monument;
+  font-size: 0.8rem;
+}
